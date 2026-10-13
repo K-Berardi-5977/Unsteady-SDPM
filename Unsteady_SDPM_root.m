@@ -66,6 +66,7 @@ end
 thetaAmp = deg2rad(5);
 
 freq = 0.05;                   % Hz
+redFreq = pi*freq;
 omegaMotion = 2*pi*freq;
 
 T = 1/freq;
@@ -447,4 +448,5 @@ figure
 plot(rad2deg(bodyState.theta), CL, 'LineWidth', 1.2)
 xlabel('\theta [deg]')
 ylabel('C_L')
+title(sprintf('C_l vs \\theta (\\pi f_c / U  = %3d)' , redFreq))
 grid on
